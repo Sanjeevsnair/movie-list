@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+  --primary-color: #3498db; /* Professional blue color */
+  --secondary-color: #2ecc71; /* Professional green color */
+}
+
+body {
+  font-family: var(--font-raleway);
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.app {
+  padding: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.9px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.search {
+  width: 50%; /* Reduce search width for better responsiveness */
+  margin: 2rem 0; /* Adjust margin for better spacing */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+  border-radius: 3rem;
+  background: #fff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box-shadow */
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  padding: 1rem;
+
+  outline: none;
+  color: #333; /* Dark text color */
+  background: #f0f0f0; /* Light gray background */
+}
+
+.search img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.empty {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty h2 {
+  font-size: 1.25rem;
+  color: #555; /* Dark gray text color */
+  font-family: var(--font-raleway);
+}
+
+.container {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 310px;
+  height: 460px;
+  margin: 1rem;
+
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+
+  transition: all 0.4s ease;
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for professional look */
+.movie div:nth-of-type(3) {
+  background-color: var(--secondary-color); /* Use the secondary color as background */
+}
+
+.movie div:nth-of-type(3) span {
+  color: #fff; /* White text color */
+}
+
+.movie div:nth-of-type(3) h3 {
+  color: #fff; /* White text color */
+}
+
+/* Hover effect modifications */
+.movie:hover {
+  box-shadow: 0px 14px 12px -8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.movie:hover div:nth-of-type(2) {
+  opacity: 0.9; /* Slightly more visible on hover */
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 2rem;
+  }
+
+  .search {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .search input {
+    font-size: 1rem;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: 100%; /* Full width on very small screens */
+    margin: 1rem;
+  }
+}
